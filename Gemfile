@@ -2,11 +2,18 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.7.1'
+#gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.1'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 #gem 'pg'
 gem 'pg', '~> 0.20'
+#gem 'activeadmin', '~> 1.0.0.pre1'
+#gem 'devise', "~> 3.2"
+gem 'devise'
+#gem 'activeadmin'
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
