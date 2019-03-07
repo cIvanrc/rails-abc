@@ -31,4 +31,31 @@ class PostsController < ApplicationController
       end
    end
 
+
+   def edit
+      @post = Post.find(params[:id])
+      @category = Category.all
+   end
+
+
+   def update
+      @post = Post.find(params[:id])
+
+      if @post.update_attributes(:title => params[:post]["title"], :body => params[:post]["body"], :category_id => params[:post]["category_id"])
+         redirect_to posts_path, :notice => "Yor post has been updated"
+      else
+         render "edit"
+      end
+   end
+
+
+   def destroy
+      @post = Post.find(params[:id])
+      @post_name = @post.title
+
+      @post.destroy
+
+      redirect_to posts_path, :notice => "the #{@post_name} has been deleted"
+   end
+
 end

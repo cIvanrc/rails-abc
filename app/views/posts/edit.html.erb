@@ -1,1 +1,15 @@
 <h2>edit view</h2>
+
+
+<%= form_for @post do |f| %>
+   <p> <%= f.label :title %>  </p>
+   <p> <%= f.text_field :title %>  </p>
+
+   <p> <%= f.label :body %>  </p>
+   <p> <%= f.text_area :body %>  </p>
+
+   <p> <%= f.select :category_id, @category.collect { |x| [x.name, x.id] }, { :include_blank => "Select one" } %>  </p>
+
+   <p> <%= f.submit "Edit post" %>  </p>
+
+<% end %>
