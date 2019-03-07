@@ -8,3 +8,18 @@
 <hr />
 
 <p> <%= @content1 %> </p>
+
+
+<hr />
+
+<p>Data from db</p>
+
+
+<% @posts.each do |post| %>
+   <p> <%= link_to post.title, post %> </p>
+
+
+<% end %>
+
+
+<%= link_to "New post", new_post_path %> 

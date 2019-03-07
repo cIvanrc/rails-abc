@@ -7,6 +7,7 @@ Rails.application.routes.draw do
    get "home/index"
 
    resources :posts
+   resources :categories
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
